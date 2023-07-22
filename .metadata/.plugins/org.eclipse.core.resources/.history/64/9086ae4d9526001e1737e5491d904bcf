@@ -1,0 +1,19 @@
+package model.entitis;
+
+public class Coisa {
+	
+	public Coisa() {
+		
+	}
+	
+	public Coisa(String nome, int id) {
+		this.id = id;
+		this.nome = nome;
+	}
+	
+	private int		id;
+	private String	nome;
+	
+	
+	
+}

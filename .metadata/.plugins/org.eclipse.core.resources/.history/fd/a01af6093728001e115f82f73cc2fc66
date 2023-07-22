@@ -1,0 +1,30 @@
+package application;
+
+import java.util.List;
+import java.util.Scanner;
+
+import entities.Employee;
+
+public class Main {
+	
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		List<Employee> employes;
+		
+		Integer qtd;
+
+		System.out.print("How many employees will be registered? ");
+		qtd = input.nextInt();
+		
+		
+		for(int i = 0; i < qtd; i++) {
+			System.out.print("Emplyoee #" + i);
+			System.out.print("Id: ");
+			
+		}
+		
+		input.close();
+	}
+
+}

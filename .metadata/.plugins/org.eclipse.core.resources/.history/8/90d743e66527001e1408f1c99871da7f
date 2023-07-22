@@ -1,0 +1,24 @@
+package entities;
+
+public class Account {
+	private int numAccount;
+	private String nameAccount;
+	private double currentMoney;
+	
+	public Account(int numAccount, String nameAccount, double currentMoney) {
+		this.numAccount = numAccount;
+		this.nameAccount = nameAccount;
+		this.currentMoney = initDposit;
+	}	
+	
+	public Account(int numAccount, String nameAccount) {
+		this.numAccount = numAccount;
+		this.nameAccount = nameAccount;
+	}	
+	
+	public void doDeposit(double deposit) {
+		currentMoney = currentMoney + deposit;
+	}
+	
+	
+}

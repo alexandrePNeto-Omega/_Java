@@ -1,0 +1,23 @@
+package gui;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
+import model.entitis.Coisa;
+
+public class ViewController implements Initializable{
+
+	@FXML
+	private ComboBox<Coisa> comboBoxCoisa;
+	private ObservableList<Coisa> listCoisa;
+	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		List<Coisa>
+	}	
+
+}

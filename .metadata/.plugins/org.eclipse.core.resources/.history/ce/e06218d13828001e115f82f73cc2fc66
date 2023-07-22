@@ -1,0 +1,53 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import entities.Employee;
+
+public class Main {
+	
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		List<Employee> employes = new ArrayList<>();
+		
+		Integer qtd;
+
+		System.out.print("How many employees will be registered? ");
+		qtd = input.nextInt();
+		
+		
+		for(int i = 0; i < qtd; i++) {
+			System.out.println("Emplyoee #" + i+1);
+			System.out.print("Id: ");
+			Integer id = input.nextInt();
+			System.out.print("Name: ");
+			String name = input.next();
+			input.nextLine();
+			System.out.print("Salary: ");
+			Double salary = input.nextDouble();
+			employes.add(new Employee(id, name, salary));
+			System.out.println();
+		}
+		
+		System.out.print("Enter the employee id that will have salary increase: ");
+		Integer queryId = input.nextInt();
+		System.out.print("Enter the percentage: ");
+		Double percent = input.nextDouble();
+		
+		for (Employee employee : employes) {
+			System.out.println(employee);
+		}
+		
+		Employee upSalary = employes
+				.stream()
+				.filter(e -> e.getId() == queryId)
+				.findFirst().orElse(null);
+
+		
+		input.close();
+	}
+
+}

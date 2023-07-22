@@ -1,0 +1,41 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import entities.Employee;
+
+public class Main {
+	
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		List<Employee> employes = new ArrayList<>();
+		
+		Integer qtd;
+
+		System.out.print("How many employees will be registered? ");
+		qtd = input.nextInt();
+		
+		
+		for(int i = 0; i < qtd; i++) {
+			System.out.println("Emplyoee #" + i);
+			System.out.print("Id: ");
+			Integer id = input.nextInt();
+			System.out.print("Name: ");
+			String name = input.next();
+			input.nextLine();
+			System.out.print("Salary: ");
+			Double salary = input.nextDouble();
+			employes.add(new Employee(id, name, salary));
+			System.out.println();
+		}
+		
+		for (Employee employee : employes) {
+			System.out.println(employee);
+		}
+		input.close();
+	}
+
+}

@@ -1,0 +1,20 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		
+		Integer qtd;
+
+		System.out.println("How many employees will be registered? ");
+		qtd = input.nextInt();
+		
+		input.close();
+	}
+
+}

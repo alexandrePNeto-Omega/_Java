@@ -1,0 +1,24 @@
+package application;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter account number: ");
+		int numAcc = input.nextInt();
+		System.out.println("Enter account name: ");
+		String nameAcc = input.nextLine();
+		System.out.println("Has init deposit?: ");
+		boolean confirmAcc = input.nextBoolean();
+		if(confirmAcc) {
+			System.out.println("Enter ini deposit: ");
+			int initMoneyAcc = input.nextInt();
+		}
+
+		
+	}
+
+}

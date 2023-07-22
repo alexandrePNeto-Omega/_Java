@@ -1,0 +1,59 @@
+package application;
+
+import java.util.Scanner;
+
+import entities.Account;
+
+public class Main {
+
+	public static void showAccout(Account acc) {
+		System.out.println("\nAccount data:");
+		System.out.printf("Account:"+acc.getNumAccount()
+		+", Holder: "+acc.getNameAccount()
+		+", Balance: %.2f", acc.getCurrentMoney());
+	}
+	
+	public static Account accountVerifi(int num, String name, double money) {
+		if(money != 0.0)
+			return new Account(num, name, money);
+		return new Account(num, name);
+	}
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		
+		System.out.print("Enter account number: ");
+		int numAcc = input.nextInt();
+		input.nextLine();
+		System.out.print("Enter account name: ");
+		String nameAcc = input.nextLine();
+		System.out.print("Has init deposit?: ");
+		String confirmAcc = input.nextLine();
+
+		if(confirmAcc.toUpperCase().equals("Y")) {	
+			 = 0.0;
+			System.out.print("Enter ini deposit: ");
+			double initMoneyAcc = input.nextInt();
+		} 
+
+		Account acc = accountVerifi(numAcc, nameAcc, initMoneyAcc);
+
+		showAccout(acc);
+		
+		System.out.println("\nDeposit value: ");
+		double deposit = input.nextDouble();
+		acc.doDeposit(deposit);
+		System.out.println("Updated account data:");
+		showAccout(acc);
+		
+		System.out.println("\nWithdraw value: ");
+		double withdraw = input.nextDouble();
+		acc.doWithdraw(withdraw);
+		System.out.println("Updated account data:");
+		showAccout(acc);
+		
+		input.close();
+	}
+
+}

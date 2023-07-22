@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="142.0" text="ESTACSYSTEM" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="207.0" fitWidth="247.0" layoutX="97.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/4842.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="comboBoxCoisa" layoutX="125.0" layoutY="388.0" onAction="#onSelectCosia" prefWidth="150.0" promptText="Select something..." />
+      <Button fx:id="buttonCoisa" layoutX="175.0" layoutY="466.0" mnemonicParsing="false" onAction="#onClickButton" text="List All" />
+   </children>
+</AnchorPane>

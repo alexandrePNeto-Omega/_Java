@@ -1,0 +1,13 @@
+package entities;
+
+public class Account {
+	private int numAccount;
+	private String nameAccount;
+	private boolean initDposit;
+	private boolean currentMoney;
+	
+	public Account(int numAccount, String nameAccount) {
+		
+	}	//	Contructor
+	
+}
